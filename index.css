@@ -1,0 +1,71 @@
+/*Color palettes: 
+https://coolors.co/847b77-c4853c-d49d59-ddb888-ced7da-7792ca
+https://coolors.co/4c5c4c-606c5a-83786f-918c84-9e9f9a
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #847b77;
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #ced7da;
+}
+.graph-container > .graph-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.graph-container > .graph {
+  width: 1000px;
+  aspect-ratio: 16/10;
+}
+.graph-container > .graph circle {
+  opacity: 0.85;
+  stroke: black;
+  stroke-width: 1;
+}
+.graph-container > .graph .doping {
+  fill: #7792ca;
+}
+.graph-container > .graph .not-doping {
+  fill: #d49d59;
+}
+.graph-container > .graph #legend > rect {
+  fill: #dce5e5;
+}
+.graph-container > .graph #legend > .sub-legend > text {
+  font-size: 12px;
+}
+.graph-container > #tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 5px;
+  background-color: #9e9f9a;
+  border: 2px solid #83786f;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.graph-container > #tooltip > p {
+  font-size: 12px;
+}
